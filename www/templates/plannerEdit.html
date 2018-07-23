@@ -1,0 +1,20 @@
+<ion-view title="Edit Planner" id="page4" class=" ">
+    <ion-content padding="true" class="has-header" ng-controller="addNewPageCtrl">
+        <form id="addNewPage-form7" class="list ">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Category
+                </div>
+                <select ng-model="categories">
+                    <option ng-repeat="item in itemPlanner">{{item.category}}</option>
+                </select>
+            </label>
+            <label class="item item-input " id="addNewPage-input5">
+                <span class="input-label">Maximum Value</span>
+                <input type="number" placeholder="" ng-model="max">
+            </label>
+        </form>
+         <a ui-sref="tabsController.planner" id="addNewPage-button2" class=" button button-energized" ng-click="submitPlannerToDB(categories, max)">Save</a> 
+        <a ui-sref="tabsController.planner" id="addNewPage-button3" class=" button button-energized  ">Cancel</a>
+    </ion-content>
+</ion-view>

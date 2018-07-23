@@ -1,0 +1,16 @@
+<ion-view title="Planner" id="page5" class=" ">
+    <ion-content padding='true' class="has-header" data-ng-init="init()">
+    <h3>Monthly Planner</h3>
+    <h3 id="noPlanner"></h3>
+        <p></p>
+        <p></p>
+        <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options"></canvas> 
+        <p></p>
+        <p></p>
+
+    <h4>Maximum Spending: <b>RM</b><b id=maxLimit></b></h4>
+
+        <a ui-sref="tabsController.plannerEdit" id="home-button1" style="text-align:left;" class=" button button-energized  button-block icon-right ion-android-add-circle ">Edit Planner</a>
+
+    </ion-content>
+</ion-view>

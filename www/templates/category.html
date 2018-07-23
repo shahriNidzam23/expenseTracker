@@ -1,0 +1,14 @@
+<ion-view title="Category" id="page6" class=" ">
+    <ion-content class="has-header" ng-controller="categoryCtrl">
+    	    
+
+	<ion-list>  	
+		<ion-item ng-repeat="item in items">
+    		   {{item.category}}
+		</ion-item>
+	</ion-list>
+
+	<a  id="category" style="text-align:left;" ng-click = "showPopup()" class=" button button-energized  button-block icon-right ion-android-add-circle ">Add new Category</a>  
+    </ion-content>
+
+</ion-view>

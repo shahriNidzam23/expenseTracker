@@ -1,0 +1,13 @@
+<ion-view title="Home" id="page2" class=" ">
+    <ion-content padding="true" class="has-header" ng-controller="homeCtrl">
+    	<h3>Daily Expense</h3>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="daily" chart-labels="labels" chart-legend="true" chart-colors="colors"></canvas>
+        <h4>Today Expense: <b id=tExpense></b></h4>
+
+        <h3>Monthly Spending</h3>
+        <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="label" chart-options="options" chart-colors="colours"></canvas>
+        <h4>Total Spending Left: <b id=tSpending></b></h4>
+
+        <a ui-sref="tabsController.addNewPage" id="home-button1" style="text-align:left;" class=" button button-energized  button-block icon-right ion-android-add-circle ">Add New Expense</a>
+    </ion-content>
+</ion-view>

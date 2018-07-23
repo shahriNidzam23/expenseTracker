@@ -1,0 +1,30 @@
+<ion-view title="Add New Expense" id="page4" class=" ">
+    <ion-content padding="true" class="has-header" ng-controller="addNewPageCtrl">
+        <form id="addNewPage-form7">
+            <label class="item item-input " id="addNewPage-input3">
+                <span class="input-label">Item</span>
+                <input type="text" placeholder="" ng-model="item">
+            </label>
+            <label class="item item-input " id="addNewPage-input5">
+                <span class="input-label">Price (RM)</span>
+                <input type="number" placeholder="" ng-model="price">
+            </label>
+        </form>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Category
+                </div>
+                <select ng-model="category">
+                    <option ng-repeat="item in items2">{{item.category}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                    <input type="date" ng-model="tarikh">
+            </label>
+
+            <p></p>
+
+         <a ui-sref="tabsController.home" id="addNewPage-button2" class=" button button-energized" ng-click="submitToDB(item, category, price, tarikh)">Save</a> 
+        <a ui-sref="tabsController.home" id="addNewPage-button3" class=" button button-energized  ">Cancel</a>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view title="History " id="page3" class=" ">
+    <ion-content class="has-header" ng-controller="historyCtrl">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" placeholder ="search" ng-model="searchHistory"/>
+      </label>
+
+    	<ion-list>
+  			<ion-item ng-repeat="item in items | filter:searchHistory |  orderBy: 'date':true" class="item-remove-animate">
+  				{{item.item}}
+  				<span class="item-note">
+      				{{item.price}}
+    			</span>
+    			<p></p>
+    			<span class="item-note">
+  					{{item.category}}
+    			</span>
+          <p></p>
+          {{item.date}}
+          <ion-option-button class="button-assertive" ng-click="deleteItem(item)">Delete</ion-option-button>
+    			
+  			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
